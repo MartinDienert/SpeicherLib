@@ -50,7 +50,7 @@ void datenausgeben(){
   Serial.println(millis());
   Daten daten = speicher.getDaten();
   Serial.print("Typ: ");
-  Serial.print(daten.typ);
+  Serial.println(daten.typ);
   Serial.print("Spannung: ");
   Serial.print(daten.spannung);
   Serial.println(" V");
