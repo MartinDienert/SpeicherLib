@@ -37,8 +37,6 @@ class Speicher{                     // Class Declaration
         Lesen lesen = nullptr;
         using Schreiben = void (*)(byte *, int);
         Schreiben schreiben = nullptr;
-        using LesenSchreiben = void (*)(boolean);           // high = schreiben, low = lesen
-        LesenSchreiben lesenSchreiben = nullptr;
         using NeueDaten = void (*)();
         NeueDaten neueDaten = nullptr;
         using GetDatumZeit = void (*)(Zeit *);
@@ -50,7 +48,6 @@ class Speicher{                     // Class Declaration
         Speicher();  // Constructor
         void callbackLesen(Lesen);
         void callbackSchreiben(Schreiben);
-        void callbackLesenSchreiben(LesenSchreiben);
         void callbackNeueDaten(NeueDaten);
         void callbackGetDatumZeit(GetDatumZeit);
         void callbackLogeintrag(Logeintrag);
