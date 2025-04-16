@@ -64,7 +64,7 @@ void setup(){
 ```
 Vorbereiten der Schnittstelle.
 ```
-speicher.callbackLesen(lesen);
+  speicher.callbackLesen(lesen);
   speicher.callbackSchreiben(schreiben);
   speicher.callbackNeueDaten(datenausgeben);
 ```
@@ -88,11 +88,11 @@ while(Serial.available()){      // Puffer leeren
 Der RX-Puffer wird gelesen und die Daten verworfen.
 ```
 void loop() {
-  digitalWrite(LED_BUILTIN,LOW);      // LED leuchtet
+  digitalWrite(LED_BUILTIN,LOW);       // LED leuchtet
   speicher.run();
   delay(300);
   digitalWrite(LED_BUILTIN,HIGH);      // LED ist aus
 }
 ```
-Die Funktion run des Speicherobjektes muss in der loop-Funktion aufgerufen werden.
+Die Funktion **run** des Speicherobjektes muss in der loop-Funktion aufgerufen werden.
 
